@@ -76,15 +76,17 @@ export class App extends React.Component {
     }
 
     savePlaylist(){
-      alert('savePlaylist correctly linked');
+      
       const trackURIs = this.state.playlistTracks.map(track => track.uri);
     }
 
     search(term){
-      console.log(term);
-      const accessToken = Spotify.getAccessToken();
-      console.log(accessToken);
-
+      Spotify.search(term).then((searchResults)=>{
+        this.setState({ searchResults: searchResults })
+      }).catch((error)=>{
+        console.log(error.message);
+      })
+  
     }
     
   render(){
