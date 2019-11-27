@@ -1,6 +1,6 @@
 
 const clientId = '23f7ac175b164bb48f58586ca665ed6a';
-const redirectURI = 'forgetful-badge.surge.sh';
+const redirectURI = 'http://jamming-app-spotify.surge.sh';
 let accessToken;
 
 
