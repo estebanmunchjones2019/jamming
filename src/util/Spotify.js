@@ -1,6 +1,6 @@
 
 const clientId = '23f7ac175b164bb48f58586ca665ed6a';
-const redirectURI = 'jamming.surge.sh';
+const redirectURI = 'forgetful-badge.surge.sh';
 let accessToken;
 
 
