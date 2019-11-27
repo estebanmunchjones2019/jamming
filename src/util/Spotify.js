@@ -1,6 +1,6 @@
 
 const clientId = '23f7ac175b164bb48f58586ca665ed6a';
-const redirectURI = 'http://localhost:3000/';
+const redirectURI = 'jamming.surge.sh';
 let accessToken;
 
 
@@ -79,7 +79,6 @@ export const Spotify = {
             
             if(createPlaylistResponse.ok){
                
-                console.log(`createPlaylistResponse.ok`);
                 const jsonCreatePlaylistResponse = await createPlaylistResponse.json();
                 playlistId = jsonCreatePlaylistResponse.id;
                 console.log(`playlistId: ${playlistId}`);
@@ -111,7 +110,9 @@ export const Spotify = {
             
          
             
- /*export const Spotify = {
+ /*--------------------Spotify module with fetch().then(). It has been refractored above with async await try and catch blocks-------------------------------------
+ 
+ export const Spotify = {
   getAccessToken(){
       if(accessToken){ 
         return accessToken;
