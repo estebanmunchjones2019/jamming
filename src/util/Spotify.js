@@ -1,6 +1,6 @@
 
 const clientId = '23f7ac175b164bb48f58586ca665ed6a';
-const redirectURI = 'http://jamming-app-spotify.surge.sh';
+const redirectURI = 'http://localhost:3000/';
 let accessToken;
 
 
@@ -51,7 +51,10 @@ export const Spotify = {
     },
   
     async savePlaylist(playlistName, trackURIs){
-      if( !playlistName || !trackURIs.length ){
+      if( !playlistName ){
+          playlistName = 'New Playlist';
+      }
+      if(!trackURIs.length){
           return;
       }
       const accessToken = Spotify.getAccessToken();
