@@ -1,0 +1,14 @@
+{
+  "projects": {
+    "default": "reactmovie-a83f5"
+  },
+  "targets": {
+    "reactmovie-a83f5": {
+      "hosting": {
+        "reactMovie": [
+          "jamming"
+        ]
+      }
+    }
+  }
+}
